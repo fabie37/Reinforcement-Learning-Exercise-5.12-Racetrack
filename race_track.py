@@ -357,6 +357,7 @@ def playing_racetrack(agent: Agent):
         agent.set_change_in_velocity((0, 1))
 
     simulate_button.draw()
+    agent.move()
 
 
 # RL Algorithm to use
@@ -443,7 +444,6 @@ while True:
         for square in row:
             square.draw()
 
-    agent.move()
     agent.draw()
 
     # Update the display
