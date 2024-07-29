@@ -410,9 +410,9 @@ def learning_racetrack():
     elif agent.get_agent_status() == AgentStatus.DEAD:
         reward = -100  # Larger negative reward for crashing
         episode.append((state, action, reward))
-        # if is_learning:
-        # rl_algo.every_visit_update(episode)
-        # episode = []
+        if is_learning:
+            rl_algo.every_visit_update(episode)
+        episode = []
         episode_count += 1
         loses += 1
         episode_count_text.update_text(f"Episode count: {episode_count}")
@@ -420,7 +420,7 @@ def learning_racetrack():
     else:
         episode.append((state, action, reward))
 
-    rl_algo.epsilon = min(loses / (max(wins, 1) + loses), 0.5)
+    # rl_algo.epsilon = min(loses / (max(wins, 1) + loses), 0.5)
 
     episode_count_text.draw(screen)
     win_count_text.draw(screen)
@@ -450,4 +450,4 @@ while True:
     pygame.display.flip()
 
     # Cap the frame rate
-    clock.tick(30)
+    clock.tick(240)
