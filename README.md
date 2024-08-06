@@ -12,7 +12,7 @@ $: python -m venv ./venv
 $: source ./venv/Scripts/activate
     ^ check for your operating system: different on Mac, Linux and Windows
 ```
-- Then install depos 
+- Then install dependances 
 ```
 $: python -m pip install -r requirements.txt
 ```
