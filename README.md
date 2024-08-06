@@ -9,7 +9,7 @@ Installing
 
 ```
 $: python -m venv ./venv
-$: source activate ./venv/Scripts/activate
+$: source ./venv/Scripts/activate
     ^ check for your operating system: different on Mac, Linux and Windows
 ```
 - Then install depos 
